@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+	<section style="width: 200%; margin: 0 40rem;">
+		<h1>
+			Don't Waste Listings
+		</h1>
+		<p style="margin-bottom: 10px; margin-left: 35px;">
+			There are {{ listings.count }} listings.
+		</p>
+		{% if request.user.is_authenticated %}
+			<a href="{% url 'create-listing' %}" class="button">
+				Create a listing
+			</a>
+		{% endif %}
+	</section>
+	<section>
+		{% for listing in listings %}
+			{% include 'base/listing_component.html' %}
+		{% endfor %}
+	</section>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% load static %}
+<header>
+        <div class="container">
+            <img src="{% static 'assets/logo.svg' %}" alt="logo" class="logo" width="32" height="32">
+            <a href="/" class="name">
+                Don't Waste
+            </a>
+            {% if request.user.is_authenticated %}
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="{% url 'logout' %}">
+                                Logout
+                            </a>
+                        </li>
+                        <li style="color: white; margin-left: 10px; text-transform: uppercase; font-size: 15px;">
+                            Welcome, {{ request.user.username }}
+                        </li>
+                    </ul>
+                </nav>
+            {% else %}
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'register' %}" id="register-nav-link">Register</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+</header>

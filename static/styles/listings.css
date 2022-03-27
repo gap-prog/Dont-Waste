@@ -1,0 +1,110 @@
+.listing-container {
+    margin: 20px 20% 25px 20%;
+    padding: 15px;
+    border: solid #049963;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.title_main {
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color ease-in-out 0.2s
+}
+
+.title:hover {color: rgb(93, 93, 93);}
+
+.posted {
+    font-size: 15px;
+    color: rgb(80, 80, 80);
+    margin: 5px 0;
+}
+
+.lister {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color ease-in-out 0.2s
+}
+
+.lister:hover {color: rgb(93, 93, 93);}
+
+.description {
+    font-size: 18px;
+    color: rgb(80, 80, 80);
+}
+
+.item_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.item {
+    color: black;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.item_amount_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-amount {
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.item-amount-unit {
+    margin-right: 5px;
+}
+
+.item-expiration {margin-left: 5px;}
+
+.address a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #049963;
+}
+
+.address a:visited{color: #049963;}
+
+.btn {margin-top: 10px;}
+
+.lister_buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    padding: 0px 30px;
+    margin-right: 10px;
+    color: white;
+    background: #049963;
+    text-decoration: none;
+    border: solid #049963;
+    border-radius: 20px;
+    font-family: "Lato Black", sans-serif;
+    text-transform: uppercase;
+}
+
+.danger {
+    background: #990404;
+    border: solid #990404;
+    margin-right: 90rem;
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+}

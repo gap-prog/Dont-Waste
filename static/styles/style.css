@@ -1,0 +1,19 @@
+/* Properties */
+
+:root {
+    --green-color: #1abc9c;
+    --white-color: #fff;
+    --light-grey-color: #d3d3d3;
+}
+
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato Black" sans-serif;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="form_container" id="create_listing">
+        <h2 class="form_title">
+            {% if page == 'update' %}
+                Update Listing
+            {% else %}
+                Create a Listing
+            {% endif %}
+        </h2>
+        <form method="POST" action="" class="form">
+            {% csrf_token %}
+            {{ form.title }}
+            {{ form.description }}
+            {{ form.item }}
+            {{ form.item_amount }}
+            {{ form.item_amount_unit }}
+            <p>
+                Format: lbs or lb, oz, ct (count), kg, etc.
+            </p>
+            {{ form.item_expiration_date }}
+            <p>
+                Format: Month Day Year
+            </p>
+            {{ form.address }}
+            <p>
+                Format: Number Street Name, City, State Zip
+            </p>
+            <input type="submit" value="Submit" class="form_submit">
+        </form>
+    </div>
+{% endblock content %}

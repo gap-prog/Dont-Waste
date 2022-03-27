@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if page == 'login' %}
+        <div class="form_container">
+            <h2 class="form_title">
+                Login
+            </h2>
+            <form method="POST" action="" class="form">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" class="form_fields" required>
+                <input type="password" name="password" placeholder="Password" class="form_fields" required>
+                <input type="submit" value="Login" placeholder="Login" class="form_submit">
+            </form>
+            <div class="other">
+                <p>
+                    Need and account? <a href="{% url 'register' %}" class="form_link">
+                        Register
+                    </a>
+                </p>
+            </div>
+        </div>
+    {% else %}
+        <div class="form_container" id="register">
+            <h2 class="form_title">
+                Register
+            </h2>
+            <form method="POST" action="" class="form">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+                <input type="submit" value="Register" class="form_submit">
+            </form>
+            <div class="other">
+                <p>
+                    Have an account? <a href="{% url 'login' %}" class="form_link">
+                        Login
+                    </a>
+                </p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock content %}

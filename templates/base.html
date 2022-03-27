@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'assets/favicon.svg' %}" type="image/x-icon">
+        <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/navbar.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/listings.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/login_register.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/listings_form.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/delete.css' %}" rel="stylesheet">
+        <link href="{% static 'styles/claim.css' %}" rel="stylesheet">
+        <title>
+            Don't Waste
+        </title>
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

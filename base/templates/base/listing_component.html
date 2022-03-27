@@ -1,0 +1,58 @@
+<div class="listing-container">
+    <div class="title_main">
+        <a href="{% url 'listing' listing.id %}" class="title">
+            {{ listing.title }}
+        </a>
+        <div class="posted">
+            Posted by: <a href="#" class="lister">{{ listing.lister.username }}</a> • {{ listing.updated | timesince }} ago
+        </div>
+    </div>
+    <div>
+        <p class="description">
+            {{ listing.description }}
+        </p>
+    </div>
+    <div class="item_info">
+        <p class="item">
+            {{ listing.item }}
+        </p>
+        •
+        <div class="item_amount_info">
+            <p class="item-amount">
+                {{ listing.item_amount }}
+            </p>
+            <p class="item-amount-unit">
+                {{ listing.item_amount_unit }}			
+            </p>
+        </div>
+        •
+        <p class="item-expiration">
+            Expires: <em>{{ listing.item_expiration_date }}</em>
+        </p>
+    </div>
+    <p class="address">
+        Address: <a href="https://maps.google.com/?q={{ listing.address }}" target="_blank">
+            {{ listing.address }}
+        </a>
+    </p>
+    <div class="btn">
+        {% if page == 'listing' %}
+            {% if request.user.is_authenticated %}
+                {% if request.user == listing.lister %}
+                    <div class="lister_buttons">
+                        <a href="{% url 'update-listing' listing.id %}" class="button">
+                            Edit
+                        </a>
+                        <a href="{% url 'delete-listing' listing.id %}" class="button danger">
+                            Delete
+                        </a>
+                    </div>
+                {% else %}
+                    <a href="{% url 'claim' listing.id %}" class="button">
+                        Claim
+                    </a>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    </div>
+</div>

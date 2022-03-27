@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="delete">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>
+            Are you sure you want to delete "{{ listing.title }}?"
+        </p>
+        <div class="delete_btn">
+            <a href="{{ request.META.HTTP_REFERER }}">
+                Back
+            </a>
+            <input type="submit" value="Confirm">
+        </div>
+    </form>
+</div>
+{% endblock content %}

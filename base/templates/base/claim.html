@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="claim">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>
+            Are you sure you want to claim "{{ listing.title }}?"
+        </p>
+        <div class="claim_btn">
+            <a href="{{ request.META.HTTP_REFERER }}">
+                Back
+            </a>
+            <input type="submit" value="Confirm">
+        </div>
+    </form>
+</div>
+{% endblock content %}

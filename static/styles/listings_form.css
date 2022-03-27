@@ -1,0 +1,18 @@
+#create_listing p {
+    font-size: 10px;
+    color: rgb(80, 80, 80);
+    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_text {
+    width: 195px;
+    height: 50px;
+    margin: -5px auto 5px auto;
+    font-family: "Lato Black";
+    text-align: center;
+}
+
+.form_text:focus {outline: none;}
