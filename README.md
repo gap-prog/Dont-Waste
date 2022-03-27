@@ -1,1 +1,2 @@
-# DiamondHacks2022Project
+# Don't Waste
+Don’t Waste connects excess food with those who are in need to reduce global food wastage and address world hunger. 
